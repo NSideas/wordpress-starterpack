@@ -1,10 +1,8 @@
-const path = require('path'),
-  MiniCssExtractPlugin = require('mini-css-extract-plugin'),
-  UglifyJSPlugin = require('uglifyjs-webpack-plugin'),
-  OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
-  BrowserSyncPlugin = require('browser-sync-webpack-plugin'),
-  StyleLintPlugin = require('stylelint-webpack-plugin'),
-  SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const path = require('path');
+const miniCssExtract = require('mini-css-extract-plugin');
+const uglifyJS = require('uglifyjs-webpack-plugin');
+const optimizeCSS = require('optimize-css-assets-webpack-plugin');
+const browserSync = require('browser-sync-webpack-plugin');
 
 module.exports = {
   context: __dirname,
@@ -29,15 +27,7 @@ module.exports = {
       },
       {
         test: /\.s?css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
-      },
-      {
-        test: /\.svg$/,
-        loader: 'svg-sprite-loader',
-        options: {
-          extract: true,
-          spriteFilename: 'svg-defs.svg'
-        }
+        use: [miniCssExtract.loader, 'css-loader', 'sass-loader']
       },
       {
         test: /\.(jpe?g|png|gif)$/,
@@ -55,15 +45,14 @@ module.exports = {
     ]
   },
   plugins: [
-    new MiniCssExtractPlugin({ filename: '../style.css' }),
-    new SpriteLoaderPlugin(),
-    new BrowserSyncPlugin({
+    new miniCssExtract({ filename: '../style.css' }),
+    new browserSync({
       files: '**/*.php',
       injectChanges: true,
       proxy: 'http://localhost:8888'
     })
   ],
   optimization: {
-    minimizer: [new UglifyJSPlugin(), new OptimizeCssAssetsPlugin()]
+    minimizer: [new uglifyJS(), new optimizeCSS()]
   }
 };
