@@ -27,7 +27,17 @@ module.exports = {
       },
       {
         test: /\.s?css$/,
-        use: [miniCssExtract.loader, 'css-loader', 'sass-loader']
+        use: [
+          miniCssExtract.loader,
+          {
+            loader: 'css-loader',
+            options: { sourceMap: true }
+          },
+          {
+            loader: 'sass-loader',
+            options: { sourceMap: true }
+          }
+        ]
       },
       {
         test: /\.(jpe?g|png|gif)$/,
