@@ -312,5 +312,8 @@ template {
 [hidden] {
   display: none; }
 
+html {
+  font-family: sans-serif; }
+
 
 /*# sourceMappingURL=style.css.map*/
