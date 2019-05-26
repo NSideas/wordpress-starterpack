@@ -1,7 +1,7 @@
 {
-  "name": "underscores",
+  "name": "wp-starterpack",
   "version": "1.0.0",
-  "description": "A WordPress starter theme.",
+  "description": "Just another WordPress starter theme.",
   "main": "index.js",
   "scripts": {
     "start": "webpack --watch",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/carrieforde/_s-with-webpack.git"
+    "url": "https://github.com/NSideas/wordpress-starterpack"
   },
   "keywords": [
     "wordpress",
@@ -25,9 +25,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/carrieforde/_s-with-webpack/issues"
+    "url": "https://github.com/NSideas/wordpress-starterpack/issues"
   },
-  "homepage": "https://github.com/carrieforde/_s-with-webpack#readme",
+  "homepage": "https://github.com/NSideas/wordpress-starterpack#readme",
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
