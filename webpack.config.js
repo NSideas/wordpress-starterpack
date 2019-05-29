@@ -59,7 +59,7 @@ module.exports = {
     new browserSync({
       files: '**/*.php',
       injectChanges: true,
-      proxy: 'http://localhost:8888'
+      proxy: 'http://starterpack.local'
     })
   ],
   optimization: {

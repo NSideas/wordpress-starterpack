@@ -335,5 +335,8 @@ body {
 .main-navigation:not(.toggled) .menu {
   display: none; }
 
+a {
+  color: #0092ca; }
+
 
 /*# sourceMappingURL=style.css.map*/
