@@ -6,7 +6,6 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package _s
  */
 
 ?>
@@ -28,10 +27,9 @@
 		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
 		<?php
-		$theme_description = get_bloginfo( 'description', 'display' );
-		if ( $theme_description ) {
-			echo "<p class='site-description'>$theme_description</p>";
-		} ?>
+		$bloginfo = get_bloginfo( 'description', 'display' );
+		echo $bloginfo ? "<p class='site-description'>$bloginfo</p>" : "";
+    ?>
 
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_s' ); ?></button>
