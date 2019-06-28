@@ -16,13 +16,14 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
         enforce: 'pre',
         exclude: /node_modules/,
-        test: /\.jsx$/,
         loader: 'eslint-loader'
       },
       {
-        test: /\.jsx?$/,
+        test: /\.js$/,
+        exclude: /node_modules/,
         loader: 'babel-loader'
       },
       {
@@ -58,11 +59,16 @@ module.exports = {
     new miniCssExtract({ filename: '../style.css' }),
     new browserSync({
       files: '**/*.php',
-      injectChanges: true,
       proxy: 'http://starterpack.local'
     })
   ],
   optimization: {
-    minimizer: [new uglifyJS(), new optimizeCSS()]
+    namedModules: true,
+    minimizer: [
+      new uglifyJS({
+        sourceMap: true
+      }),
+      new optimizeCSS()
+    ]
   }
 };
