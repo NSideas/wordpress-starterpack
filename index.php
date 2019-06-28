@@ -28,9 +28,7 @@ get_header();
 			endif;
 
 			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
+			while ( have_posts() ) : the_post();
 				/*
 				 * Include the Post-Type-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
