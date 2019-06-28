@@ -15,6 +15,8 @@ get_header();
 
 		get_template_part( 'template-parts/content', get_post_type() );
 
+    custom_edit_link();
+
     the_post_navigation( array(
       'prev_text'          => 'prev chapter: %title',
       'next_text'          => 'next chapter: %title',

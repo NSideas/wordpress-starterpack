@@ -125,6 +125,9 @@ function _s_scripts() {
 add_action( 'wp_enqueue_scripts', '_s_scripts' );
 
 
+// Custom template tags for this theme.
+require get_template_directory() . '/inc/template-tags.php';
+
 // Functions which enhance the theme by hooking into WordPress.
 require get_template_directory() . '/inc/template-functions.php';
 

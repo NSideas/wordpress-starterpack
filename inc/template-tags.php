@@ -2,10 +2,14 @@
 /**
  * Custom template tags for this theme
  *
- * Eventually, some of the functionality here could be replaced by core features.
- *
- * @package _s
  */
+
+ function custom_edit_link() {
+   if ( get_edit_post_link() ) {
+     $link_text = 'Edit ' . get_the_title();
+     return edit_post_link( $link_text, '<div class="edit-link">', '</div>' );
+   }
+ }
 
 if ( ! function_exists( '_s_posted_on' ) ) :
 	/**
