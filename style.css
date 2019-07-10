@@ -10,9 +10,6 @@ License URI: LICENSE
 Text Domain: _s
 Tags: custom
 */
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
 	 ========================================================================== */
@@ -337,6 +334,15 @@ body {
 
 a {
   color: #0092ca; }
+
+h1 {
+  font-size: 1.5em; }
+
+h2 {
+  font-size: 1.25em; }
+
+h3 {
+  font-size: 1.125em; }
 
 
 /*# sourceMappingURL=style.css.map*/
