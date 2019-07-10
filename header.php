@@ -7,7 +7,6 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  */
-
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -22,8 +21,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-
-	<header id="masthead" class="site-header">
+	<header class="site-header">
 		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
 		<?php
