@@ -16,5 +16,8 @@
   "globals": {
     "wp": true,
     "jQuery": true
+  },
+  "rules": {
+    "yoda": "off"
   }
 }
