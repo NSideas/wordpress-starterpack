@@ -4,9 +4,9 @@
   "description": "Just another WordPress starter theme.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --watch",
-    "build": "webpack --mode=production",
-    "clean": "rm -r public/*",
+    "start": "webpack --mode development --watch",
+    "build": "webpack --mode production",
+    "clean": "rm -r public/* & rm -r *.map",
     "eslint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "eslint:fix": "eslint \"src/**/*.{js,jsx}\" --quiet --fix",
     "format": "prettier --write \"src/**/*.{js,jsx,scss}\"",
